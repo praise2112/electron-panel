@@ -7,17 +7,17 @@
               "conditions":[
                   ["OS=='linux'", {
                       "sources": [
-                        "functions_linux.cc"
+                        "functions_linux.mm"
                       ]
                   }],
                   ["OS=='win'", {
                       "sources": [
-                        "functions_win.cc"
+                        "functions_win.mm"
                       ]
                   }],
                   ['OS=="mac"', {
                       "sources": [
-                          "functions_mac.cc"
+                          "functions_mac.mm"
                       ],
                       "libraries": [
                           'Foundation.framework',

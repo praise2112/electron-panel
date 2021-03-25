@@ -30,9 +30,9 @@ describe('Electron Panel', function () {
       }
     });
 
-    it('shows panel', function () {
-      return this.app.client.waitUntilWindowLoaded()
-        .getWindowCount().should.eventually.equal(1);
+    it('shows panel', async function () {
+      const count = await this.app.client.getWindowCount()
+      return count === 1
     });
   });
 
@@ -53,9 +53,9 @@ describe('Electron Panel', function () {
       }
     });
 
-    it('shows panel', function () {
-      return this.app.client.waitUntilWindowLoaded()
-        .getWindowCount().should.eventually.equal(1);
+    it('shows panel', async function () {
+      const count = await this.app.client.getWindowCount()
+      return count === 1
     });
   });
 
@@ -76,9 +76,9 @@ describe('Electron Panel', function () {
       }
     });
 
-    it('animates panel entering view', function () {
-      return this.app.client.waitUntilWindowLoaded()
-        .getWindowCount().should.eventually.equal(1);
+    it('shows panel', async function () {
+      const count = await this.app.client.getWindowCount()
+      return count === 1
     });
   });
 
@@ -99,9 +99,9 @@ describe('Electron Panel', function () {
       }
     });
 
-    it('closes panel', function () {
-      return this.app.client.waitUntilWindowLoaded()
-          .getWindowCount().should.eventually.equal(1);
+    it('shows panel', async function () {
+      const count = await this.app.client.getWindowCount()
+      return count === 1
     });
   });
 
@@ -122,9 +122,9 @@ describe('Electron Panel', function () {
       }
     });
 
-    it('animates panel leave', function () {
-      return this.app.client.waitUntilWindowLoaded()
-          .getWindowCount().should.eventually.equal(1);
+    it('shows panel', async function () {
+      const count = await this.app.client.getWindowCount()
+      return count === 1
     });
   });
 });

@@ -3,7 +3,6 @@
   "description": "Enables creating a browser window in Electron that behaves like a Panel.",
   "version": "0.0.1",
   "main": "index.js",
-  "types": "electron.d.ts",
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp rebuild --release",

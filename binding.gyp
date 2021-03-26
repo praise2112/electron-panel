@@ -2,7 +2,7 @@
     "targets": [
         {
             "target_name": "NativeExtension",
-            "sources": [ "NativeExtension.cc" ],
+            "sources": [ "NativeExtension.mm"],
             "link_settings": {
               "conditions":[
                   ["OS=='linux'", {

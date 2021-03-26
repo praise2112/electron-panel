@@ -1,4 +1,4 @@
-const { BrowserWindow } = require('electron');
+const { Browserwindow } = require('electron');
 const NativeExtension = require('bindings')('NativeExtension');
 
 // Only darwin supported for now

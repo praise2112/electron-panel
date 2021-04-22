@@ -14,8 +14,11 @@ class Panel extends BrowserWindow {
   }
 
   show(animate) {
-    animate = animate || false;
-    NativeExtension.ShowPanel(this.getNativeWindowHandle(), animate);
+    const canShow = super.emit('will-show')
+    if(canShow){
+      animate = animate || false;
+      NativeExtension.ShowPanel(this.getNativeWindowHandle(), animate);
+    }
   }
 
   hide(animate) {

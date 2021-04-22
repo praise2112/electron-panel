@@ -14,7 +14,10 @@ class Panel extends BrowserWindow {
   }
 
   show(animate) {
-    const canShow = super.emit('will-show')
+    let canShow = true
+    super.emit('will-show', {
+      preventDefault: ()=> {canShow = false}
+    })
     const willShowListenerCount = super.listenerCount('will-show')
     if(willShowListenerCount === 0 || canShow){
       animate = animate || false;

@@ -15,4 +15,18 @@ app.on('ready', function() {
     },
   });
   mainWindow.loadURL(`file://${__dirname}/index.html`);
+
+  
+  mainWindow.on('close', (e)=>{
+    console.log("close")
+  })
+
+  mainWindow.on('closed', ()=>{
+    console.log("closed")
+  })
+
+  // setTimeout(()=>{
+  //   console.log("closing")
+  //   console.log(mainWindow.close())
+  // }, 5000)
 });

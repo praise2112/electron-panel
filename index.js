@@ -15,7 +15,8 @@ class Panel extends BrowserWindow {
 
   show(animate) {
     const canShow = super.emit('will-show')
-    if(canShow){
+    const willShowListenerCount = super.listenerCount('will-show')
+    if(willShowListenerCount === 0 || canShow){
       animate = animate || false;
       NativeExtension.ShowPanel(this.getNativeWindowHandle(), animate);
     }

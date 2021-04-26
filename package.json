@@ -1,5 +1,5 @@
 {
-  "name": "electron-panel-window",
+  "name": "@praise2112/electron-panel-window",
   "description": "Enables creating a browser window in Electron that behaves like a Panel.",
   "version": "0.0.1",
   "main": "index.js",

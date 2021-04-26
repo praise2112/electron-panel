@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require('electron');
-const { Panel } = require('../../index').init();
+const { Panel } = require('../../index');
 
 app.on('ready', function() {
   const mainWindow = new BrowserWindow({

@@ -33,13 +33,13 @@ app.on('ready', function() {
   // setTimeout(()=>{
   //   console.log('showuld hide')
   //   mainWindow.hide()
-  // }, 10000)
+  // }, 5000)
 
   // setTimeout(()=>{
   //   console.log('showuld shouw 2')
   //   mainWindow.show()
   //   mainWindow.focus()
-  // }, 15000)
+  // }, 10000)
 
 
   

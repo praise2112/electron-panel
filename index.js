@@ -30,6 +30,7 @@ class Panel extends BrowserWindow {
   focus(){
     if(this.focusable){
       super.focus()
+      super.emit('focus')
     }
   }
 

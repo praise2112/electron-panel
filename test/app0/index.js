@@ -16,32 +16,4 @@ app.on('ready', function() {
   });
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
-
-  // mainWindow.on('focus', ()=>{
-  //   console.log('focus 1')
-  // })
-
-  // mainWindow.on('show', ()=>{
-  //   console.log('show 1')
-  // })
-
-  // setTimeout(()=>{
-  //   console.log('showuld shouw')
-  //   mainWindow.show()
-  // }, 5000)
-
-  // setTimeout(()=>{
-  //   console.log('showuld hide')
-  //   mainWindow.hide()
-  // }, 5000)
-
-  // setTimeout(()=>{
-  //   console.log('showuld shouw 2')
-  //   mainWindow.show()
-  //   mainWindow.focus()
-  // }, 10000)
-
-
-  
-  
 });

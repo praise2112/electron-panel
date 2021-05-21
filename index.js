@@ -7,7 +7,6 @@ const isDarwin = process.platform === "darwin";
 class Panel extends BrowserWindow {
   constructor(options) {
     super({ ...options, show: false });
-    this.focusable = !!options.focusable
     NativeExtension.MakePanel(this.getNativeWindowHandle());
     if (options.show) {
       this.show();
@@ -23,14 +22,6 @@ class Panel extends BrowserWindow {
     if(willShowListenerCount === 0 || canShow){
       animate = animate || false;
       NativeExtension.ShowPanel(this.getNativeWindowHandle(), animate);
-      super.emit('show')
-    }
-  }
-
-  focus(){
-    if(this.focusable){
-      super.focus()
-      super.emit('focus')
     }
   }
 

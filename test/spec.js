@@ -31,12 +31,9 @@ describe('Electron Panel', function () {
         return this.app.stop();
       }
     });
-    // const timeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
 
     it('shows panel', async function () {
       const count = await this.app.client.getWindowCount()
-      // await timeout(1000000)
       return count === 1
     });
   });

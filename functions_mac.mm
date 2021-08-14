@@ -79,8 +79,16 @@ napi_value MakePanel(napi_env env, napi_callback_info info) {
   [window setContentSize:mainContentView.frame.size];
   [window setContentMinSize:originalWindow.contentMinSize];
   [window setContentMaxSize:originalWindow.contentMaxSize];
-  [window
-      setAppearance:[NSAppearance appearanceNamed:NSAppearanceNameDarkAqua]];
+  NSAppearanceName NSAppearanceNameDarkAqua;
+  if(@available(macOS 10.15, *)){
+    [window
+        setAppearance:[NSAppearance appearanceNamed:NSAppearanceNameDarkAqua]];
+  }
+  else{
+    // fix for macos 10.15 and lower. (mojave and high sierra)
+     [window
+      setAppearance:[NSAppearance appearanceNamed:NSAppearanceNameAqua]];
+  }
   [window setMovableByWindowBackground:YES];
   [window setFloatingPanel:YES];
   [window setLevel:NSFloatingWindowLevel];

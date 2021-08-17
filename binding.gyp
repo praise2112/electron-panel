@@ -20,7 +20,7 @@
             },
             "xcode_settings": {
                 "OTHER_CFLAGS": [
-                    "-x objective-c++ -stdlib=libc++ -fexceptions"
+                    "-x objective-c++ -stdlib=libc++"
                 ]
             }
         }
